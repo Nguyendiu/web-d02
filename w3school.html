@@ -5,10 +5,418 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../web-d02/asset.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/webfonts/fa-brands-400.svg">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/webfonts/fa-regular-400.svg">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/webfonts/fa-solid-900.svg">
+    <script src="../web-d02/w3school.js"></script>
 </head>
 
-<body>
-    helo
+<body style="position: relative; min-height: 100%; top: 0px;">
+    <div class="wrapall">
+        <div class="header">
+            <a class="logo" href="https://www.w3schools.com/"> w3schools <span class="dotcom">.com</span></a>
+
+            <div class="header-left w3-right w3-hide-small w3-wide toptext">
+                THE WORLD'S LARGEST WEB DEVELOPER SITE
+                <button id="w3loginbtn" style="display: inline; border: none; cursor: pointer;"
+                    class="login w3-right">LOGIN</button>
+            </div>
+        </div>
+        <div>
+            <div class=" topnav " style="position: relative;">
+                <div style="overflow:auto;">
+                    <div class="w3-bar w3-left">
+                        <a class="topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button" title="Menu"></a>
+                        <a class="topnav-icons fas fa-home w3-left w3-bar-item w3-button" title="Home"></a>
+                        <a class="w3-bar-item w3-button active" title="HTML Tutorial">HTML</a>
+                        <a class="w3-bar-item w3-button" title="CSS Tutorial">CSS</a>
+                        <a class="w3-bar-item w3-button" title="JavaScript Tutorial">JAVASCRIPT</a>
+                        <a class="w3-bar-item w3-button" title="SQL Tutorial">SQL</a>
+                        <a class="w3-bar-item w3-button" title="Python Tutorial">PYTHON</a>
+                        <a class="w3-bar-item w3-button" title="PHP Tutorial">PHP</a>
+                        <a class="w3-bar-item w3-button" title="Bootstrap Tutorial">BOOTSTRAP</a>
+                        <a class="w3-bar-item w3-button" title="How To">HOW TO</a>
+                        <a class="w3-bar-item w3-button" id="topnavbtn_tutorials" title="Tutorials">MORE <i
+                                class="fa fa-caret-down" style="display: inline;"></i><i class="fa fa-caret-up"
+                                style="display: none;"></i>
+                        </a>
+                        <a title="Courses">COURSES</a>
+                        <a id="topnavbtn_references" title="References">REFERENCES <i class="fa fa-caret-down"
+                                style="display: none;"></i><i class="fa fa-caret-up" style="display: inline;"></i></a>
+                        <i class="fas fa-adjust"></i>
+                        <i class="fas fa-globe-americas"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="tab leftmenuinnerinner">
+                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">HTML Tutorial</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">HTML HOME</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Introduction</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Editors</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Basic</button>
+                    <button class="tablinks" onclick="openCity(event, 'HTML Elements')">HTML Elements</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Attributes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Headings</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Paragraphs</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Styles</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Formatting</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Quotations</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Comments</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Colors</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML CSS</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Links</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Images</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Tables</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Lists</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Block & Inline</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Classes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Id</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Iframes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML JavaScript</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML File Paths</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Layout</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Responsive</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Computercode</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Semantics</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Style Guide</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Entities</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Symbols</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Emojis</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Charset</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML URL Encode</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML vs. XHTML</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Forms</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Forms</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Form Attributes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Form Elements</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Input Types</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Input Attributes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Input Form Attributes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')"> HTML Graphics</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Canvas</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML SVG</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Media</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Media</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Video</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Audio</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Plug-ins</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML YouTube</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML APIs</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Geolocation</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Drag/Drop</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Web Storage</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Web Workers</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML SSE</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Examples</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Quiz</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Exercises</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Certificate</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Summary</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Accessibility</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML References</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Tag List</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Attributes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Global Attributes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Browser Support</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Events</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Colors</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Canvas</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Audio/Video</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Doctypes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Character Sets</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML URL Encode</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML Lang Codes</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTTP Messages</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTTP Methods</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">PX to EM Converter</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Keyboard Shortcuts</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTMLHead</button>
+
+                </div>
+
+            </div>
+            <div class="right-content">
+                <div id="HTML Elements" class="tabcontent">
+                    <div>
+                        <h1><span>HTML Elements</span></h1>
+                        <button class="Previous">❮ Previous</button>
+                        <button class="Next">Next ❯</button>
+                    </div>
+                    <div class="div-p">
+                        <p>An HTML element is defined by a start tag, some content, and an end tag.</p>
+                    </div>
+                    <h1>HTML Elements</h1>
+                    <div class="div-p">
+                        <p>The HTML
+                            <strong class="strong">element </strong> is everything from the start tag to the end tag:
+                        </p>
+                        <div style="font-size:20px;padding:10px;margin-bottom:10px;">
+                            <span style="color:brown"><span style="color:mediumblue">&lt;</span>tagname<span
+                                    style="color:mediumblue">&gt;</span></span>Content goes here...<span
+                                style="color:brown"><span style="color:mediumblue">&lt;</span>/tagname<span
+                                    style="color:mediumblue">&gt;</span></span>
+                        </div>
+                        <p>Examples of some HTML elements:</p>
+                        <div style="font-size:20px;padding:10px;margin-bottom:10px;">
+                            <span style="color:brown"><span style="color:mediumblue">&lt;<span
+                                        style="color:brown">h1</span>&gt;</span></span>My
+                            First Heading<span style="color:brown"><span style="color:mediumblue">&lt;</span>/h1<span
+                                    style="color:mediumblue">&gt;</span></span>
+                        </div>
+                        <div style="font-size:20px;padding:10px;margin-bottom:10px;">
+                            <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span
+                                    style="color:mediumblue">&gt;</span></span>My first paragraph.<span
+                                style="color:brown"><span style="color:mediumblue">&lt;</span>/p<span
+                                    style="color:mediumblue">&gt;</span></span>
+                        </div>
+                        <table class="w3-table-all notranslate">
+                            <tbody>
+                                <tr>
+                                    <th>Start tag</th>
+                                    <th>Element content</th>
+                                    <th>End tag</th>
+                                </tr>
+                                <tr>
+                                    <td>&lt;h1&gt;</td>
+                                    <td>My First Heading</td>
+                                    <td>&lt;/h1&gt;</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;p&gt;</td>
+                                    <td>My first paragraph.</td>
+                                    <td>&lt;/p&gt;</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;br&gt;</td>
+                                    <td><em>none</em></td>
+                                    <td><em>none</em></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="w3-panel w3-note">
+                            <p><strong>Note:</strong> Some HTML elements have no content (like the &lt;br&gt;
+                                element). These elements are called empty elements. Empty elements do not have an end
+                                tag!</p>
+                        </div>
+                        <hr>
+                        <h6>Nested HTML Elements</h6>
+                        <p>HTML elements can be nested (this means that elements can contain other elements).</p>
+                        <p>All HTML documents consist of nested HTML elements.</p>
+                        <p>The following example contains four HTML elements (<code
+                                class="w3-codespan">&lt;html&gt;</code>, <code class="w3-codespan">&lt;body&gt;</code>,
+                            <code class="w3-codespan">&lt;h1&gt;</code>
+                            and <code class="w3-codespan">&lt;p&gt;</code>):
+                        </p>
+                        <img src="../image/pic1.PNG">
+                        <h6>Example Explained</h6>
+                        <p>The <code class="w3-codespan">&lt;html&gt;</code> element is the root element
+                            and it defines the whole HTML document.</p>
+                        <p>It has a start tag <code class="w3-codespan">&lt;html&gt;</code> and an end tag <code
+                                class="w3-codespan">&lt;/html&gt;</code>.</p>
+                        <p>Then, inside the <code class="w3-codespan">&lt;html&gt;</code> element there is
+                            a <code class="w3-codespan">&lt;body&gt;</code>
+                            element:
+                        </p>
+                        <p>Then, inside the <code class="w3-codespan">&lt;html&gt;</code> element there is
+                            a <code class="w3-codespan">&lt;body&gt;</code>
+                            element:</p>
+                        <img src="../image/pic2.PNG">
+                        <p>The <code class="w3-codespan">&lt;body&gt;</code> element defines the
+                            document's body.</p>
+                        <p>It has a start tag <code class="w3-codespan">&lt;body&gt;</code> and an end tag <code
+                                class="w3-codespan">&lt;/body&gt;</code>.</p>
+                        <p>Then, inside the <code class="w3-codespan">&lt;body&gt;</code> element there
+                            are two other elements:
+                            <code class="w3-codespan">&lt;h1&gt;</code> and <code class="w3-codespan">
+                                    &lt;p&gt;</code>:
+                        </p>
+                        <img src="../image/pic3.PNG">
+                        <p>The <code class="w3-codespan">&lt;h1&gt;</code> element defines a heading.</p>
+                        <p>It has a start tag <code class="w3-codespan">&lt;h1&gt;</code> and an end tag <code
+                                class="w3-codespan">&lt;/h1&gt;</code>:</p>
+                        <img src="../image/pic4.PNG">
+                        <img src="../image/pic5.PNG">
+                        <h6>Never Skip the End Tag</h6>
+                        <p>Some HTML elements will display correctly, even if you forget the end tag:</p>
+                        <img src="../image/pic6.PNG">
+                        <p><strong>However, never rely on this! Unexpected results and errors may occur if you forget
+                                the end tag!</strong></p>
+                        <h6>Empty HTML Elements</h6>
+                        <p>HTML elements with no content are called empty elements.</p>
+                        <p>The <code class="w3-codespan">&lt;br&gt;</code> tag defines a line break, and
+                            is an empty element without a closing tag:</p>
+                        <img src="../image/pic7.PNG">
+                        <h6>HTML is Not Case Sensitive</h6>
+                        <p>HTML tags are not case sensitive: <code class="w3-codespan">&lt;P&gt;</code> means the same
+                            as <code class="w3-codespan">&lt;p&gt;</code>.</p>
+                        <p>The HTML standard does not require lowercase tags, but W3C
+                            <b>recommends</b> lowercase in HTML, and <b>demands</b> lowercase for stricter document
+                            types like XHTML.
+                        </p>
+                        <img src="../image/pic8.PNG">
+                        <h6>HTML Tag Reference</h6>
+                        <p>W3Schools' tag reference contains additional information about these tags and their
+                            attributes.</p>
+                        <img src="../image/pic9.PNG">
+                        <button class="Previous">❮ Previous</button>
+                        <button class="Next">Next ❯</button>
+                        <hr>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                <button class="contact">REPORT ERROR</button>
+                <button class="contact">FORUM</button>
+                <button class="contact">ABOUT</button>
+                <button class="contact">SHOP</button>
+                <div class="w3-row w3-center w3-small">
+                    <div class="w3-col l3 m6 s12">
+                        <div class="top10">
+                            <h4>Top Tutorials</h4>
+                            <a href="/html/default.asp">HTML Tutorial</a><br>
+                            <a href="/css/default.asp">CSS Tutorial</a><br>
+                            <a href="/js/default.asp">JavaScript Tutorial</a><br>
+                            <a href="/howto/default.asp">How To Tutorial</a><br>
+                            <a href="/sql/default.asp">SQL Tutorial</a><br>
+                            <a href="/python/default.asp">Python Tutorial</a><br>
+                            <a href="/w3css/default.asp">W3.CSS Tutorial</a><br>
+                            <a href="/bootstrap/bootstrap_ver.asp">Bootstrap Tutorial</a><br>
+                            <a href="/php/default.asp">PHP Tutorial</a><br>
+                            <a href="/java/default.asp">Java Tutorial</a><br>
+                            <a href="/cpp/default.asp">C++ Tutorial</a><br>
+                            <a href="/jquery/default.asp">jQuery Tutorial</a><br>
+                        </div>
+                    </div>
+                    <div class="w3-col l3 m6 s12">
+                        <div class="top10">
+                            <h4>Top References</h4>
+                            <a href="/tags/default.asp">HTML Reference</a><br>
+                            <a href="/cssref/default.asp">CSS Reference</a><br>
+                            <a href="/jsref/default.asp">JavaScript Reference</a><br>
+                            <a href="/sql/sql_ref_keywords.asp">SQL Reference</a><br>
+                            <a href="/python/python_reference.asp">Python Reference</a><br>
+                            <a href="/w3css/w3css_references.asp">W3.CSS Reference</a><br>
+                            <a href="/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap Reference</a><br>
+                            <a href="/php/php_ref_overview.asp">PHP Reference</a><br>
+                            <a href="/colors/colors_names.asp">HTML Colors</a><br>
+                            <a href="/java/java_ref_keywords.asp">Java Reference</a><br>
+                            <a href="/angular/angular_ref_directives.asp">Angular Reference</a><br>
+                            <a href="/jquery/jquery_ref_overview.asp">jQuery Reference</a><br>
+                        </div>
+                    </div>
+                    <div class="w3-col l3 m6 s12">
+                        <div class="top10">
+                            <h4>Top Examples</h4>
+                            <a href="/html/html_examples.asp">HTML Examples</a><br>
+                            <a href="/css/css_examples.asp">CSS Examples</a><br>
+                            <a href="/js/js_examples.asp">JavaScript Examples</a><br>
+                            <a href="/howto/default.asp">How To Examples</a><br>
+                            <a href="/sql/sql_examples.asp">SQL Examples</a><br>
+                            <a href="/python/python_examples.asp">Python Examples</a><br>
+                            <a href="/w3css/w3css_examples.asp">W3.CSS Examples</a><br>
+                            <a href="/bootstrap/bootstrap_examples.asp">Bootstrap Examples</a><br>
+                            <a href="/php/php_examples.asp">PHP Examples</a><br>
+                            <a href="/java/java_examples.asp">Java Examples</a><br>
+                            <a href="/xml/xml_examples.asp">XML Examples</a><br>
+                            <a href="/jquery/jquery_examples.asp">jQuery Examples</a><br>
+                        </div>
+                    </div>
+                    <div class="w3-col l3 m6 s12">
+                        <div class="top10">
+                            <!--
+                    <h4>Web Certificates</h4>
+                    <a href="/cert/default.asp">HTML Certificate</a><br>
+                    <a href="/cert/default.asp">CSS Certificate</a><br>
+                    <a href="/cert/default.asp">JavaScript Certificate</a><br>
+                    <a href="/cert/default.asp">SQL Certificate</a><br>
+                    <a href="/cert/default.asp">Python Certificate</a><br>
+                    <a href="/cert/default.asp">PHP Certificate</a><br>
+                    <a href="/cert/default.asp">Bootstrap Certificate</a><br>
+                    <a href="/cert/default.asp">XML Certificate</a><br>
+                    <a href="/cert/default.asp">jQuery Certificate</a><br>
+                    <a href="//www.w3schools.com/cert/default.asp" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+                    Get Certified &raquo;</a>
+                    -->
+
+                            <h4>Web Courses</h4>
+                            <a href="https://courses.w3schools.com/courses/html" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on html course link in footer');">HTML
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/css" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on css course link in footer');">CSS
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/javascript" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on javascript course link in footer');">JavaScript
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/programs/front-end" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on Front End course link in footer');">Front
+                                End Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/sql" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on sql course link in footer');">SQL
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/python" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on python course link in footer');">Python
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/php" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on php course link in footer');">PHP
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/jquery" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on jquery course link in footer');">jQuery
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/java" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on Java course link in footer');">Java
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/cplusplus" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on C++ course link in footer');">C++
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/c-sharp" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on bootstrap C# link in footer');">C#
+                                Course</a><br>
+                            <a href="https://courses.w3schools.com/courses/xml" target="_blank"
+                                onclick="ga('send', 'event', 'Courses' , 'Clicked on xml course link in footer');">XML
+                                Course</a><br>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="certifies">
+                    <a href="https://courses.w3schools.com/" target="_blank"
+                        class="w3-button w3-margin-top w3-dark-grey w3-round certifies" style="text-decoration:none"
+                        onclick="ga('send', 'event', 'Courses' , 'Clicked on get certified button in footer');">
+                        Get Certified »</a>
+                    <hr>
+
+
+                </div>
+                <hr>
+                <div class="w3-center w3-small w3-opacity">
+                    W3Schools is optimized for learning and training. Examples might be simplified to improve reading
+                    and learning.
+                    Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant
+                    full correctness of all content.
+                    While using W3Schools, you agree to have read and accepted our <a
+                        href="/about/about_copyright.asp">terms of use</a>,
+                    <a href="/about/about_privacy.asp">cookie and privacy policy</a>.<br><br>
+                    <a href="/about/about_copyright.asp">Copyright 1999-2021</a> by Refsnes Data. All Rights
+                    Reserved.<br>
+                    <a href="//www.w3schools.com/w3css/default.asp">W3Schools is Powered by W3.CSS</a>.<br><br>
+                    <a href="//www.w3schools.com">
+                        <img style="width:150px;height:28px;border:0" src="../image/w3schoolscom_gray.gif"
+                            alt="W3Schools.com"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </body>
 
 </html>
