@@ -6,3 +6,5 @@ const same = (_arr1, _arr2) => {
 }
 
 console.log(same([1, 2, 3], [9, 1, 4]))
+console.log(same([1, 2, 3], [9, 1]))
+console.log(same([1, 2, 1], [4, 1, 4]))
