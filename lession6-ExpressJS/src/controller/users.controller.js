@@ -16,7 +16,10 @@ const users = [
         name: 'Tien',
     }
 ]
-
+const userLogin = [{
+    user: "admin",
+    password: "123456"
+}]
 
 module.exports.getUsers = (req, res) => {
     res.status(200).json({
