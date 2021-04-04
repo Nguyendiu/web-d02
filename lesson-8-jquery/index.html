@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson-8-jquery</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                alert(($('#text').text()))
+            });
+            $('#btn2').click(function () {
+                alert("HTML: " + $("#text").html());
+            });
+            $('#btn3').click(function () {
+                alert(($('.class-input').val()))
+            })
+            $('#btn4').click(function () {
+                alert(($('#name-input').attr("class")))
+            });
+            $('#btn5').click(function () {
+                ($('#text').text(' update text'))
+            })
+            $('#btn6').click(function () {
+                $('#text').html('<p><a href="https://www.facebook.com/">Link<a/></p.')
+            })
+            $('#btn7').click(function () {
+
+                $('#name-input').val("value has change")
+            });
+            $('#btn8').click(function () {
+                $('#text').css('background-color', "yellow")
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <p id="text" style="background-color: aqua;"> This is Text</p>
+    <label for="usernname">Username</label> <br>
+    <input type="text" class="class-input" id="name-input" name="username" value=" class Input text...">
+    <br>
+    <h4 id="get-heading">Get</h4>
+    <button id="btn1" onclick="">Show Text</button>
+    <button id="btn2" onclick="">Show HTML</button>
+    <button id="btn3" onclick="">Show Value</button>
+    <button id="btn4" onclick="">Show attr </button>
+    <br>
+    <h4 id="get-heading">Set</h4>
+    <button id="btn5" onclick="">Set Text</button>
+    <button id="btn6" onclick="">SetHTML</button>
+    <button id="btn7" onclick="">Set Value</button>
+    <button class="attr-class" id="btn8" onclick="">Set attr </button>
+</body>
+
+</html>
