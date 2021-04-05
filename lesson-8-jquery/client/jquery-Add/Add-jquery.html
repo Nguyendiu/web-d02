@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").append(" <b>Appended text</b>.");
+            });
+            $("#btn2").click(function () {
+                $("p").prepend(" <b>prepend text</b>.");
+            });
+            $("#btn3").click(function () {
+                $("p").after(" <b>after text</b>.");
+            });
+            $("#btn4").click(function () {
+                $("p").before(" <b> before text</b>.");
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <p id="text">This is a text</p>
+    <input class="class-input-text" id="input-text" value="type your text here" />
+    <button id="btn1" onclick="">Add Append</button>
+    <button id="btn2" onclick="">Add prepend</button>
+    <button id="btn3" onclick="">Add after</button>
+    <button id="btn4" onclick="">Add before</button>
+</body>
+
+</html>
