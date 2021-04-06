@@ -14,6 +14,7 @@ let users = [
 ]
 
 console.log(users[1].pass)
+console.log(users.length)
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Route to Homepage
@@ -25,6 +26,10 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/login/login.html');
 });
+app.get('/wellcom', (req, res) => {
+    res.sendFile(__dirname + '/login/wellcom.html');
+})
+
 app.post('/login', (req, res) => {
     // Insert Login Code Here
     let username = req.body.username;

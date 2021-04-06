@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson-8-jquery</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#btn9').click(function () {
+                alert(($('#text').text()))
+            });
+            $("#btn10").click(function () {
+                alert("HTML: " + $("#text").html());
+            });
+            $('#btn11').click(function () {
+                alert(($('#input-text').val()))
+            });
+            $('#btn12').click(function () {
+                alert(($('#input-text').attr("class")))
+            });
+            $("#btn1").click(function () {
+                $("p").append(" <b>Appended text</b>.");
+            });
+            $("#btn2").click(function () {
+                $("p").prepend(" <b>prepend text</b>.");
+            });
+            $("#btn3").click(function () {
+                $("p").after(" <b>after text</b>.");
+            });
+            $("#btn4").click(function () {
+                $("p").before(" <b> before text</b>.");
+            });
+            $('#btn5').click(function () {
+                ($('#text').text("hello"))
+            });
+            $("#btn6").click(function () {
+                + $("#text").html("<h1><a href='https://www.youtube.com/'>Youtube</a></h1>");
+            });
+            $('#btn7').click(function () {
+                $('#input-text').val("value updating")
+            });
+            $('#btn8').click(function () {
+                $('#text').css('background-color', "yellow")
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <p id="text">This is a text</p>
+    <input class="class-input-text" id="input-text" value="type your text here" />
+    <button id="btn9" onclick="">Get Text</button>
+    <button id="btn10" onclick="">Get HTML</button>
+    <button id="btn11" onclick="">Get Val</button>
+    <button id="btn12" onclick="">Get Attr</button>
+    <!-- add -->
+    <p id="text">This is a text</p>
+    <input class="class-input-text" id="input-text" value="type your text here" />
+    <button id="btn1" onclick="">Add Append</button>
+    <button id="btn2" onclick="">Add prepend</button>
+    <button id="btn3" onclick="">Add after</button>
+    <button id="btn4" onclick="">Add before</button>
+    <!-- set -->
+    <p id="text">This is a text</p>
+    <input class="class-input-text" id="input-text" value="type your text here" />
+    <button id="btn5" onclick="">Set Text</button>
+    <button id="btn6" onclick="">Set HTML</button>
+    <button id="btn7" onclick="">Set Value</button>
+    <button id="btn8" onclick="">Set Attr</button>
+</body>
+
+</html>
