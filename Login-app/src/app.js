@@ -16,7 +16,7 @@ app.use('/users', (req, res, next) => {
 app.use('/users', usersRoute)
 
 app.get('/', (req, res) => {
-    res.send('Hello World!sdsdsadaa')
+    res.sendFile(__dirname + '/client/login.html')
 })
 
 app.listen(port, () => {
