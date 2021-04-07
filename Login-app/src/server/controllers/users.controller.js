@@ -1,19 +1,11 @@
 let users = [
     {
-        id: '1',
-        name: 'Hieu',
+        name: 'admin',
+        pass: '123'
     },
     {
-        id: '69',
-        name: 'Quang',
-    },
-    {
-        id: '1000',
-        name: 'Khai',
-    },
-    {
-        id: '4',
-        name: 'Tien',
+        name: 'teo',
+        pass: '456'
     }
 ]
 
@@ -26,8 +18,8 @@ module.exports.getUsers = (req, res) => {
 }
 
 module.exports.getUserById = (req, res) => {
-    const { id } = req.params
-    const user = users.find(user => user.id === id)
+    const { username } = req.body
+    const { password } = req.body
 
     if (!!!user) {
         return res.status(400).json({
