@@ -5,7 +5,7 @@ const path = require('path')
 const usersRoute = require("./server/routes/users.route")
 
 const app = express()
-const port = 8080
+const port = 8088
 
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'client')))
