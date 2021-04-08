@@ -18,8 +18,7 @@ module.exports.getUsers = (req, res) => {
 }
 
 module.exports.getUserById = (req, res) => {
-    const { username } = req.body
-    const { password } = req.body
+
 
     if (!!!user) {
         return res.status(400).json({
