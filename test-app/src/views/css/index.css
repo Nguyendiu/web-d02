@@ -1,0 +1,33 @@
+.mgt-login{
+    margin-top: 120px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.mgl-28{
+    margin-left: 28px;
+}
+.btn-login{
+    width: -webkit-fill-available;
+}
+.f-login{
+    border: 10px solid rgb(12, 127, 156);
+}
+input:focus{
+    outline: none;
+}
+input{
+    border: 0.5px solid wheat;;
+}
+.status{
+    border-top: 0.5px solid wheat;
+    border-bottom: 0.5px solid wheat ;
+}
+.newfeed{
+    border-top: 5px rgba(201, 199, 199, 0.87) solid;
+}
+.right-content{
+    border-left: 5px rgba(201, 199, 199, 0.87) solid;;
+}
+ul{
+    list-style: none;
+}

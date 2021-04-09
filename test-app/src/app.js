@@ -1,46 +1,66 @@
+const bodyParser = require('body-parser');
 var express = require('express');
+const path = require('path')
 var app = express();
-var bodyParser = require('body-parser');
-var multer = require('multer');
-var upload = multer();
-var session = require('express-session');
-var cookieParser = require('cookie-parser');
-const port = 3000
-app.set('view engine', 'pug');
-app.set('views', './views');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(upload.array());
-app.use(cookieParser());
-app.use(session({ secret: "Your secret key" }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-var Users = [];
-
-app.get('/signup', function (req, res) {
-
-    res.render('signup');
-});
-
-app.post('/signup', function (req, res) {
-    if (!req.body.id || !req.body.password) {
-        res.status("400");
-        res.send("Invalid details!");
-    } else {
-        Users.filter(function (user) {
-            if (user.id === req.body.id) {
-                res.render('signup', {
-                    message: "User Already Exists! Login or choose another user id"
-                });
-            }
-        });
-        var newUser = { id: req.body.id, password: req.body.password };
-        Users.push(newUser);
-        req.session.user = newUser;
-        res.redirect('/protected_page');
+app.use(express.static(path.join(__dirname, 'views')))
+// var router = express.Router();
+let users = [
+    {
+        email: 'admin',
+        password: '123'
+    },
+    {
+        email: 'teo',
+        password: '456'
+    },
+    {
+        email: 'ti',
+        password: '789'
     }
+]
+module.exports.getUsers = (req, res) => {
+    res.status(200).json({
+        isSuccess: true,
+        message: 'success',
+        users
+    })
+}
+
+app.use(bodyParser());
+
+console.log(users)
+const port = 3000
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, "views", "index.html"))
+
+})
+app.post('/main', function (req, res) {
+    var body = req.body;
+    var email = body.email;
+    var password = body.password;
+    console.log(body);
+    console.log('email:' + email)
+    console.log('pass:' + password)
+    const user = users.find(user => user.email === email)
+    if (!!!user) {
+        res.send('kiem tra lai')
+    }
+    let index = users.indexOf(email)
+    users[index] = { email, password }
+    res.sendFile(path.join(__dirname, "views", "main.html"))
+
 });
 
+var router = require('./users.router.js');
+
+//both index.js and things.js should be in same directory
+app.use('/users.router', router);
+app.post('/hello', function (req, res) {
+    res.send("You just called the post method at '/hello'!");
+});
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
