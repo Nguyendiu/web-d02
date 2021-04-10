@@ -2,7 +2,6 @@ const bodyParser = require('body-parser');
 var express = require('express');
 const path = require('path')
 var app = express();
-
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'views')))
@@ -37,6 +36,9 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "views", "index.html"))
 
 })
+app.post('/signup', function (req, res) {
+    res.sendFile(path.join(__dirname, "views", "signup.html"))
+})
 app.post('/main', function (req, res) {
     var body = req.body;
     var email = body.email;
@@ -44,13 +46,31 @@ app.post('/main', function (req, res) {
     console.log(body);
     console.log('email:' + email)
     console.log('pass:' + password)
-    const user = users.find(user => user.email === email)
-    if (!!!user) {
-        res.send('kiem tra lai')
+    // const user = users.find(user => user.email === email)
+    // if (!!!user) {
+    //     res.send('kiem tra lai')
+    // }
+    // let index = users.indexOf(email)
+    // users[index] = { email, password }
+    // res.sendFile(path.join(__dirname, "views", "main.html"))
+    if (!email || !password) {
+        res.send('kiem trai lai tai khoan')
+    } else {
+        users.filter(function (user) {
+            if (user.email === email && user.password === password) {
+                // req.session.user = user;
+                // res.redirect('/protected_page');
+                res.sendFile(path.join(__dirname, "views", "main.html"))
+
+            } else {
+                // res.sendFile(path.join(__dirname, "views", "signup.html"))
+
+            }
+
+        })
+
     }
-    let index = users.indexOf(email)
-    users[index] = { email, password }
-    res.sendFile(path.join(__dirname, "views", "main.html"))
+
 
 });
 
