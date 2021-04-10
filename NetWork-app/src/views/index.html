@@ -20,7 +20,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 col-md-6 col-sm-6">
                 <h1>NetWork Application</h1>
                 <p>Đăng nhập hoặc tạo thêm tài khoản</p>
                 <p>Đăng nhập gần đây</p>
@@ -29,21 +29,23 @@
                 <a href="" style="text-decoration: none;"><img src="./img/user-plus.jpg" alt=""
                         style="width: 200px;border-radius: 50%;"></a>
             </div>
-            <div class="col-6 mgt-login" style="text-align: center;color: blue;">
-                <div style="background-color: aqua;" class="f-login">
-                    <form id="form-login" action="/main" method="POST">
-                        <p>
-                            <label for="email">Email </label><br>
-                            <input class="" type="text" id="email" name="email" autofocus></input>
-                        </p>
-                        <p>
-                            <label for="pasword">Password </label><br>
-                            <input type="password" id="password" name="password"></input>
-                        </p>
-                        <input type="submit" value="Login" class="btn-login" style="color: blue;"></input>
-                        <button><a href="/signup">SignUp</a></button>
-                    </form>
+            <div class="col-6 col-md-6 col-sm-6 mgt-login" style="text-align: center;color: blue;">
+                <div class="row">
+                    <div style="background-color: aqua;" class="f-login ">
+                        <form id="form-login" action="/main" method="POST">
+                            <p>
+                                <label for="email">Email </label><br>
+                                <input class="" type="text" id="email" name="email" autofocus></input>
+                            </p>
+                            <p>
+                                <label for="pasword">Password </label><br>
+                                <input type="password" id="password" name="password"></input>
+                            </p>
+                            <input type="submit" value="Login" class="btn-login" style="color: blue;"></input>
+                            <button><a href="/signup">SignUp</a></button>
+                        </form>
 
+                    </div>
                 </div>
             </div>
         </div>

@@ -54,21 +54,27 @@ app.post('/main', function (req, res) {
     // users[index] = { email, password }
     // res.sendFile(path.join(__dirname, "views", "main.html"))
     if (!email || !password) {
-        res.send('kiem trai lai tai khoan')
-    } else {
-        users.filter(function (user) {
-            if (user.email === email && user.password === password) {
-                // req.session.user = user;
-                // res.redirect('/protected_page');
-                res.sendFile(path.join(__dirname, "views", "main.html"))
-
-            } else {
-                // res.sendFile(path.join(__dirname, "views", "signup.html"))
-
-            }
-
+        return res.send('kiem trai lai tai khoan')
+    }
+    const user = users.find(user => user.email === email)
+    if (!user) {
+        return res.status(400).json({
+            message: "email khong ton tai"
         })
+    }
 
+    if (user.password === password) {
+        return (
+            res.sendFile(path.join(__dirname, "views", "main.html"))
+        )
+
+    }
+    if (user.password !== password) {
+        return (
+            res.status(400).json({
+                message: 'pass sai'
+            })
+        )
     }
 
 
